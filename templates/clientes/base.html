@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='clientes/navbar.css' ) }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+
+    <!--Aquí inicia el código para la barra de links (navbar)-->
+    <header class="header">
+        <!--Se ponen clases para facilitar darle formato con el css-->
+        <nav class="nav">
+            <!--Aquí debe incluirse la dirección del logo-->
+            <a href="#" class="logo">Piñatas</a>
+            <!--Botón de menu desplegable-->
+            <button class="nav-taggle">
+                <i class="fa fa-bars"></i>
+            </button>
+            <ul class="nav-menu nav-menu_visible">
+                <!--Links de los html con sus clases-->
+                <li class="nav-menu-item"><a href="{{url_for('clientes.home')}}" class="nav-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="{{url_for('clientes.about')}}" class="nav-link">¿Quiénes somos?</a></li>
+                <li class="nav-menu-item"><a href="{{url_for('clientes.services')}}" class="nav-link">Servicios</a></li>
+                <li class="nav-menu-item"><a href="{{url_for('clientes.contact')}}" class="nav-link">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Aquí va el bloque para agregar contenidos-->
+    {% block contents %}{% endblock %}
+
+</body>
+
+</html>

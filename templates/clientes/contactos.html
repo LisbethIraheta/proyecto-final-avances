@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='clientes/style_contacto.css' ) }}">
+{% extends 'clientes/base.html'%}
+
+{% block title %}Contactos{% endblock %}
+
+{% block contents%}
+<h1>Contáctanos</h1>
+<br>
+<h3>Puedes contactarnos por diferentes vías</h3>
+<br>
+<ul>
+    <li>Instagram: @ejemplo_1</li>
+    <br>
+    <li>Facebook: ejemplo_2</li>
+    <br>
+    <li>Teléfono: 1234-5678</li>
+    <br>
+    <li>Email: ejemplo@prueba.com</li>
+</ul>
+{% endblock %}

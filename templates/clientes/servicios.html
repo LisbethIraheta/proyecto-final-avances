@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='clientes/style_servicios.css' ) }}">
+{% extends 'clientes/base.html'%}
+
+{% block title %}Servicios{% endblock %}
+
+{% block contents%}
+<h1>Puedes encontrar...</h1>
+<br>
+<br>
+<h2>[Enumerar y ordenar todos los productos disponibles]</h2>
+<br>
+<br>
+<ul>
+    <li class="productos">Piñatas</li>
+    <br>
+    <li class="productos">Arreglos de globos</li>
+    <br>
+    <li class="productos">Dulces/Confitería</li>
+
+</ul>
+
+{% endblock %}
